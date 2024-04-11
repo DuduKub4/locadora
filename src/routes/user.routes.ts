@@ -6,6 +6,6 @@ const createUserController = new CreateUserController();
 const getAllUsersController = new GetAllUsersController();
 
 export const userRoutes = async (fastify: FastifyInstance) => {
-  fastify.post('/', createUserController.handle);
-  fastify.get('/', getAllUsersController.handle);
+  fastify.post('/users', createUserController.handle);
+  fastify.get('/users', getAllUsersController.handle);
 };

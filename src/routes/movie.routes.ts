@@ -8,7 +8,7 @@ const getMoviesByReleaseDateController = new GetMoviesByReleaseDateController();
 const createMovieRentController = new CreateMovieRentController();
 
 export const movieRoutes = async (fastify: FastifyInstance) => {
-  fastify.post('/', createMovieController.handle);
-  fastify.get('/release', getMoviesByReleaseDateController.handle);
-  fastify.post('/rent', createMovieRentController.handle);
+  fastify.post('/movies', createMovieController.handle);
+  fastify.get('/movies/release', getMoviesByReleaseDateController.handle);
+  fastify.post('/movies/rent', createMovieRentController.handle);
 };
